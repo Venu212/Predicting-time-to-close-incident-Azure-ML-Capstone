@@ -7,23 +7,40 @@ TODO: Write a short introduction to your project.
 Project Set Up and Installation
 OPTIONAL: If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 
-Dataset
-Overview 
-TODO: Explain about the data you are using and where you got it from.
+## Dataset
 
 ### Data Set: [Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/00498/)
+Overview
+The incident management log data is retrieved from UCI Machine learnig data set. [Incident Data)https://archive.ics.uci.edu/ml/datasets/Incident+management+process+enriched+event+log. The data is sourced from a Servicenow platform for IT service management.
 
-NOTE: This file is a template that you can use to create the README for your project. The TODO comments below will highlight the information you should be sure to include.
+This provides details of various incidents recorded over period of time . I have taken up this project to predict ETA(expected time of accomplishment) to understand time to resolve each incident. This helps IT department to provide ETA for customers based on time taken to resolve similar issues historically. This will also help IT department to understand if any instance will go beyond expected SLA.
 
-
-
-Task
-TODO: Explain the task you are going to be solving with this dataset and the features you will be using for it.
+#### Dataset details
+** Number of instances   : 141712
+   No of Characteristics : 36
+   Dataset Type          : Characteristics
+   Dependent Variable    : Time to close 
+   
+#### Task
+This event log is extracted from Servicenow plotform instance of IT service management.
+Some of the important attributes are 
+Incident Number : An identifier of incident
+Incident State : The status of incident in its life cycle like : created, open , assigned , resolved , closed etc..
+Category, Sub category : Helps to identify or classify the type of incident
+Impact : Provides if it has high , medium or low impact
+Urgency , Priority : provides Urgency and priority of the incident to resolve
+Created on , opened on, resolved on, closed on : Provides the timestamp details of the progress to resolve or close the task.
+*b Target Variable b*
+Time to close : The calculated variable to get time needed to close the task in hours 
+                This is calculated as difference between time to close and time to create a task .
 
 Access
-TODO: Explain how you are accessing the data in your workspace.
+The data is accessed from url : https://archive.ics.uci.edu/ml/datasets/Incident+management+process+enriched+event+log
+The CSV file is extracted from Zip file obtained form the URL.
+The incidents that have the status as 'closed' are considered for model to predict time to close an incident.
+The sample data set used is : ![imag](./images/1_dataset.PNG)
 
-Automated ML
+## Automated ML
 TODO: Give an overview of the automl settings and configuration you used for this experiment
 
 Results
