@@ -51,7 +51,7 @@ The following tasks are done :
 
 ## Connect workspaceand createexperiment
 
-![imag](./images/1_computet.PNG)
+![imag](./images/1_compute.PNG)
 
 ![imag](./images/3_AutoML Runs.PNG)
 
