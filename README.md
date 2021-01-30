@@ -41,7 +41,72 @@ The incidents that have the status as 'closed' are considered for model to predi
 The sample data set used is : ![imag](./images/1_dataset.PNG)
 
 ## Automated ML
-TODO: Give an overview of the automl settings and configuration you used for this experiment
+Auto ML is used to train the model and view the results of the metrics obtained.
+
+The following tasks are done :
+**b Connectyour workspaceand createan experiment
+**b Load data and train scikit-learn models
+**b View training results in thestudio
+**b Retrievethe best model
+
+## Connect workspaceand createexperiment
+
+![imag](./images/1_computet.PNG)
+
+![imag](./images/3_AutoML Runs.PNG)
+
+![imag](./images/4_1_Algorithms.PNG)
+
+![imag](./images/4_AutoML_BestRun.PNG)
+
+![imag](./images/6_Experiments.PNG)
+
+![imag](./images/7_ModelSummary.PNG)
+
+![imag](./images/20_AutoMLExperimentRuns.PNG)
+
+![imag](./images/21_AutoML_BestRundetails.PNG)
+
+
+
+
+
+
+## HD Run
+
+![imag](./images/![imag](./images/11_HD_Run.PNG)
+
+![imag](./images/15_Hyperdrive config.PNG)
+
+![imag](./images/12_HD_Child_Runs.PNG)
+
+![imag](./images/13_HDRunMetrcis.PNG)
+
+![imag](./images/15_Hyperdrive config.PNG)
+
+![imag](./images/16_HyperdriveRunDetails.PNG)
+
+
+![imag](./images/14_AllRunDetails.PNG)
+
+
+![imag](./images/21_AutoML_BestRundetails.PNG)
+
+22_BestRunDetails.PNG)
+
+## deployment
+
+![imag](./images/24_AutoML_Deployment.PNG)
+
+![imag](./images/25_deployment_endpoint.PNG)
+
+![imag](./images/HD_BestRUnMetrics.PNG)
+
+![imag](./images/Hyperdrive details.PNG)
+
+
+
+
 
 Results
 TODO: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
