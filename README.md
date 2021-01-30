@@ -39,6 +39,8 @@ The data is accessed from url : https://archive.ics.uci.edu/ml/datasets/Incident
 The CSV file is extracted from Zip file obtained form the URL.
 The incidents that have the status as 'closed' are considered for model to predict time to close an incident.
 The sample data set used is : ![imag](./images/1_dataset.PNG)
+![imag](./images/1_1_dataset.PNG)
+
 
 ## Automated ML
 Auto ML is used to train the model and view the results of the metrics obtained.
@@ -51,12 +53,19 @@ The following tasks are done :
 
 ## Connect workspaceand createexperiment
 
+Compute is creatd and configuration details is obtained 
 ![imag](./images/2_compute.PNG)
 
+AUTO ML configuration is created
+![imag](./images/2_1_AutoML_Config.PNG)
+
+Auto ML experiment is submitted and it has resulted in folowing runs
+
 ![imag](./images/3_AutoML Runs.PNG)
-
+![imag](./images/3_1_AutoML_Runs.PNG
+The model is trained in various algorithms
 ![imag](./images/4_1_Algorithms.PNG)
-
+The best AutoML Run is choosen and saved.
 ![imag](./images/4_AutoML_BestRun.PNG)
 
 ![imag](./images/6_Experiments.PNG)
