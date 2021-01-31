@@ -119,7 +119,7 @@ AUTOML has resulted in provided best R2 score as shown below.
 
 ### Best RUn Details
 
-![imag](./images/222_BestRunDetails.PNG)
+![imag](./images/22_BestRunDetails.PNG)
 
 ## Model Deployment
 
@@ -131,7 +131,7 @@ AUTOML has resulted in provided best R2 score as shown below.
 
 ### Test the endpoint model 
 
-![imag](./images/
+![imag](./images/26_EndPointTested.PNG)
 
 
 
