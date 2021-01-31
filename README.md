@@ -59,13 +59,15 @@ Compute is creatd and configuration details is obtained
 AUTO ML configuration is created
 ![imag](./images/2_1_AutoML_Config.PNG)
 
-Auto ML experiment is submitted and it has resulted in folowing runs
+### Auto ML experiment is submitted and it has resulted in folowing runs
 
 ![imag](./images/3_AutoML Runs.PNG)
 ![imag](./images/3_1_AutoML_Runs.PNG
-The model is trained in various algorithms
+
+### The model is trained in various algorithms
 ![imag](./images/4_1_Algorithms.PNG)
-The best AutoML Run is choosen and saved.
+
+### The best AutoML Run is choosen and saved.
 ![imag](./images/4_AutoML_BestRun.PNG)
 
 ![imag](./images/6_Experiments.PNG)
@@ -74,6 +76,7 @@ The best AutoML Run is choosen and saved.
 
 ![imag](./images/20_AutoMLExperimentRuns.PNG)
 
+### Best Run of AUTOML details are shown 
 ![imag](./images/21_AutoML_BestRundetails.PNG)
 
 
@@ -83,35 +86,53 @@ The best AutoML Run is choosen and saved.
 
 ## HD Run
 
-![imag](./images/![imag](./images/11_HD_Run.PNG)
+### Hyperdrive is configured 
 
 ![imag](./images/15_Hyperdrive config.PNG)
 
+![imag](./images/Hyperdrive details.PNG)
+
+### Hyperdrive resulted into the following runs
 ![imag](./images/12_HD_Child_Runs.PNG)
 
-![imag](./images/13_HDRunMetrcis.PNG)
+### Hyperdrive Run details
 
-![imag](./images/15_Hyperdrive config.PNG)
+
+![imag](./images/11_HD_Run.PNG)
 
 ![imag](./images/16_HyperdriveRunDetails.PNG)
 
-
+## All child runs are shown as below
 ![imag](./images/14_AllRunDetails.PNG)
 
+### Hyper Drive Metrics
+![imag](./images/13_HDRunMetrcis.PNG)
 
-![imag](./images/21_AutoML_BestRundetails.PNG)
-
-22_BestRunDetails.PNG)
-
-## deployment
-
-![imag](./images/24_AutoML_Deployment.PNG)
-
-![imag](./images/25_deployment_endpoint.PNG)
 
 ![imag](./images/HD_BestRUnMetrics.PNG)
 
-![imag](./images/Hyperdrive details.PNG)
+AUTOML has resulted in provided best R2 score as shown below.
+
+### Auto ML Runs best run details
+![imag](./images/21_AutoML_BestRundetails.PNG)
+
+
+
+### Best RUn Details
+
+![imag](./images/222_BestRunDetails.PNG)
+
+## Model Deployment
+
+![imag](./images/24_AutoML_Deployment.PNG)
+
+### The end point for Auto ML model 
+
+![imag](./images/25_deployment_endpoint.PNG)
+
+### Test the endpoint model 
+
+![imag](./images/
 
 
 
