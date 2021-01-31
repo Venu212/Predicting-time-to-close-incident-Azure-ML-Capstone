@@ -85,22 +85,25 @@ n_cross_validations       |3        |Number of cross-validation splits
 ### Auto ML experiment is submitted and it has resulted in folowing runs
 
 ### Create and run the experiment
-![imag](./images/3_AutoML%20Runs.PNG)
 
 ![imag](./images/3_1_AutoML_Runs.PNG)
+
+![imag](./images/20_AutoMLExperimentRuns.PNG)
 
 ### The model is trained in various algorithms
 ![imag](./images/4_1_Algorithms.PNG)
 
+## Various runs of AutoML are:
+![imag](./images/3_AutoML%20Runs.PNG)
+
 ### The best AutoML Run is choosen and saved.
-
-![imag](./images/20_AutoMLExperimentRuns.PNG)
-
 
 ![imag](./images/4_AutoML_BestRun.PNG)
 
+## Experiments
 ![imag](./images/6_Experiments.PNG)
 
+## Model Summary
 ![imag](./images/7_ModelSummary.PNG)
 
 
