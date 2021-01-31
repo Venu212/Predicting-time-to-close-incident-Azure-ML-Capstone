@@ -120,9 +120,49 @@ Votinng Ensemble is chosen as better algorithm and has given R2 Score as 0.503
 
 
 
-## HD Run
+## Hyper Drive Run
+
+ **The main tasks are :**
+- Define the parameter search space
+- Specify a primary metric to optimize
+- Specify early termination criteria for poorly performing runs
+- Allocate resources for hyperparameter tuning
+- Launch an experiment with the above configuration
+- Visualize the training runs
+- Select the best performing configuration for your model
 
 ### Hyperdrive is configured 
+Hyperparameters are adjustable parameters you choose to train a model that govern the training process itself.
+Azure Machine Learning allows you to automate hyperparameter exploration in an efficient manner, saving you
+significant time and resources. You specify the range of hyperparameter values and a maximum number of
+training runs. The system then automatically launches multiple simultaneous runs with different parameter
+configurations
+
+**Sampling Hyper parameter space:**
+Parameter sampling method to use over the hyperparameter space definition. Azure
+Machine Learning service supports random sampling, grid sampling, and Bayesian sampling methods
+
+**Ramdom Sampling**
+ In random sampling, hyperparameter values are randomly selected from the defined search space
+ - Max depth: 
+ - earning rate: 
+ 
+ primary metric you want the hyperparameter tuning experiment to optimize.
+ **BanditPolicy :**
+   Bandit is a termination policy based on slack factor/slack amount and evaluation interval. 
+   The policy early terminates any runs where the primary metric is not within the specified slack factor / slack amount with respect
+   to the best performing training run.
+   
+  - slack_factor = 0.1 ( The slack allowed with respect to the best performing training run)
+  - evaluation_interval=1 (evaluation_interval : the frequency for applying the policy ).
+  - delay_evaluation=5  (delays the first policy evaluation for a specified number of intervals)
+  
+  **Estimator :**
+      - source_directory = './source',
+      - entry_script = 'train-1.py',
+      - compute_target = cpu_cluster,
+      - user_managed = True
+
 
 ![imag](./images/15_Hyperdrive%20config.PNG)
 
