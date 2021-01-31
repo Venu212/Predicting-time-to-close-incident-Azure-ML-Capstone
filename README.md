@@ -143,7 +143,7 @@ Votinng Ensemble is chosen as better algorithm and has given R2 Score as 0.503
 ### Hyper Drive Metrics
 ![imag](./images/13_HDRunMetrcis.PNG)
 
-
+### Hyper drive best run metrcis:
 ![imag](./images/HD_BestRUnMetrics.PNG)
 
 AUTOML has resulted in provided best R2 score as shown below.
