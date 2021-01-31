@@ -178,6 +178,11 @@ An endpoint is an instantiation of the model into a web servicethat can be hoste
 
 ![imag](./images/25_deployment_endpoint.PNG)
 
+### The endpoint of the published model:
+![imag](./imagesimages/8_DeploymentDetails.PNG)
+
+![imag](./imagesimages/9_RestEndpoint.PNG)
+
 ### Test the endpoint model 
 
 1. Send the data as a JSON array to the web service hosted in ACI.
