@@ -13,7 +13,7 @@ OPTIONAL: If your project has any special installation steps, this is where you 
 Overview
 The incident management log data is retrieved from UCI Machine learnig data set. [Incident Data)https://archive.ics.uci.edu/ml/datasets/Incident+management+process+enriched+event+log. The data is sourced from a Servicenow platform for IT service management.
 
-This provides details of various incidents recorded over period of time . I have taken up this project to predict ETA(expected time of accomplishment) to understand time to resolve each incident. This helps IT department to provide ETA for customers based on time taken to resolve similar issues historically. This will also help IT department to understand if any instance will go beyond expected SLA.
+This provides details of various incidents recorded over period of time. I have taken up this project to predict ETA(expected time of accomplishment) to understand time to resolve each incident. This helps IT department to provide ETA for customers based on time taken to resolve similar issues historically. This will also help IT department to understand if any instance will go beyond expected SLA.
 
 #### Dataset details
 ** Number of instances   : 141712
@@ -52,15 +52,29 @@ The following tasks are done :
 **b Retrievethe best model
 
 ## Connect workspaceand createexperiment
+A computetarget is cretaed to specify the computeresource to run your training script or hostyour service
 
 Compute is creatd and configuration details is obtained 
 ![imag](./images/2_compute.PNG)
 
 AUTO ML configuration is created
+
+   PROPERTY             | VALUE   | DESCRIPTION
+------------------------|----------|-------------------------------------------------------------
+iteration_timeout_minutes | 2       |Timelimit in minutes for each iteration.
+experiment_timeout_minutes|  20     | Maximum amount of timein minutes
+enable_early_stopping     | True    | Flag to enable early termination 
+primary_metric            |R2 Score | R2 Score
+featurization             | auto    | To handel theinput data (handling missing data, converting text to numeric, etc.)
+verbosity                 |logging.INFO| Controls thelevel of logging.
+n_cross_validations       |5        |Number of cross-validation splits
+
+
 ![imag](./images/2_1_AutoML_Config.PNG)
 
 ### Auto ML experiment is submitted and it has resulted in folowing runs
 
+### Createand run theexperiment
 ![imag](./images/3_AutoML Runs.PNG)
 ![imag](./images/3_1_AutoML_Runs.PNG
 
@@ -119,21 +133,40 @@ AUTOML has resulted in provided best R2 score as shown below.
 
 ### Best RUn Details
 
+VotingEnsemble is considered the best model, based on the AUC_weighted metric.
+We deploy this model,
+
 ![imag](./images/22_BestRunDetails.PNG)
 
 ## Model Deployment
 
+The automated machinelearning interface allows to deploy the best model as a web servicein.
+Deployment helps to integrate the model so it can predict on new data and identify potential areas of
+opportunity.
+
+To build the environment for ACI, the following is provided:
+- A scoring script (score.py) is created to show how to use the model
+- A configuration fileto build the ACI
+- The model trained.
+
 ![imag](./images/24_AutoML_Deployment.PNG)
 
 ### The end point for Auto ML model 
+An endpoint is an instantiation of the model into a web servicethat can be hosted in the cloud
 
 ![imag](./images/25_deployment_endpoint.PNG)
 
 ### Test the endpoint model 
 
+1. Send the data as a JSON array to the web service hosted in ACI.
+2. Use the SDK's run API to invoke the service.
+
 ![imag](./images/26_EndPointTested.PNG)
 
 
+## Clean up resources
+- delete only the Container Instances deployment by using this API call
+service.delete()
 
 
 
