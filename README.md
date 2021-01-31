@@ -88,11 +88,10 @@ AUTO ML configuration is created
 
 ### Hyperdrive is configured 
 
-![imag](./images/15_Hyperdrive config.PNG)
+![imag](./images/15_Hyperdrive%20config.PNG)
 
-![imag](./images/Hyperdrive details.PNG)
 
-### Hyperdrive resulted into the following runs
+### The experiment is created and submitted. Hyperdrive resulted into the following runs
 ![imag](./images/12_HD_Child_Runs.PNG)
 
 ### Hyperdrive Run details
