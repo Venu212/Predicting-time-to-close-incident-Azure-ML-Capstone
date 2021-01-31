@@ -15,7 +15,7 @@ OPTIONAL: If your project has any special installation steps, this is where you 
 
 ## Dataset
 
-### [Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/00498/)"
+### [Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/00498/)
 Overview
 The incident management log data is retrieved from UCI Machine learnig data set. [Incident Data)https://archive.ics.uci.edu/ml/datasets/Incident+management+process+enriched+event+log. The data is sourced from a Servicenow platform for IT service management.
 
@@ -38,8 +38,9 @@ Some of the important attributes are
 - Created on , opened on:  The timestamp of created date / opened date of incident
 - resolved on, closed on : Provides the timestamp details of the progress to resolve or close the task.
 
-**Target Variable **
-** Time to close : \n**   The calculated variable to get time needed to close the task in hours 
+**Target Variable**
+
+**Time to close :**       The calculated variable to get time needed to close the task in hours 
                            This is calculated as difference between time to close and time to create a task .
 
 ** Access
@@ -56,10 +57,11 @@ The sample data set used is :
 Auto ML is used to train the model and view the results of the metrics obtained.
 
 The following tasks are done :
-** Connectyour workspaceand createan experiment 
-** Load data and train scikit-learn models
-** View training results in thestudio
-** Retrievethe best model
+
+- Connectyour workspaceand createan experiment 
+- Load data and train scikit-learn models
+- View training results in thestudio
+- Retrievethe best model
 
 ## Connect workspace and create experiment
 A computetarget is cretaed to specify the computeresource to run your training script or hostyour service
@@ -91,15 +93,19 @@ n_cross_validations       |3        |Number of cross-validation splits
 ![imag](./images/4_1_Algorithms.PNG)
 
 ### The best AutoML Run is choosen and saved.
+
+![imag](./images/20_AutoMLExperimentRuns.PNG)
+
+
 ![imag](./images/4_AutoML_BestRun.PNG)
 
 ![imag](./images/6_Experiments.PNG)
 
 ![imag](./images/7_ModelSummary.PNG)
 
-![imag](./images/20_AutoMLExperimentRuns.PNG)
 
-### Best Run of AUTOML details are shown 
+
+### Best run of AUTOML details are:
 ![imag](./images/21_AutoML_BestRundetails.PNG)
 
 
