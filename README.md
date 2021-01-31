@@ -168,6 +168,11 @@ opportunity.
 
 To build the environment for ACI, the following is provided:
 - A scoring script (score.py) is created to show how to use the model
+   The scoring script must have two required functions:
+   
+    * init() - that loads your model and 
+    * run() it runs the obtained model on your input data. 
+    * Then provide the environment files to inference config along with the script file and deploy the service.
 - A configuration fileto build the ACI
 - The model trained.
 
