@@ -2,7 +2,13 @@
 
 ## Incident Management Process - Event Log
 
-TODO: Write a short introduction to your project.
+Incident management is the process used by DevOps and IT Operations teams to respond to an unplanned event or service interruption and restore the service
+Incidents that cannot be resolved quickly by the help desk will be assigned to specialist technical support groups. 
+A resolution or work-around should be established as quickly as possible in order to restore the service.
+
+The dats is taken from s Servicenow instance of ITSM ( IT Service Management) . It provides details of the incident and it's characteristics and tells when the issue is resolved or closed by specilist . In this project , I am trying to predict the time taken for incident to close or resolve, so that the requester will be informed upfront.
+Also it helps to analyze if the incident wil miss SLA ( service level agreement ) in such cases , there will be a scope to take preventive action by mobilizing the suitable resources.
+
 
 Project Set Up and Installation
 OPTIONAL: If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
@@ -22,16 +28,16 @@ This provides details of various incidents recorded over period of time. I have 
    Dependent Variable    : Time to close 
    
 #### Task
-This event log is extracted from Servicenow plotform instance of IT service management.
+This event log is extracted from an instance of Servicenow
 Some of the important attributes are 
-Incident Number : An identifier of incident
-Incident State : The status of incident in its life cycle like : created, open , assigned , resolved , closed etc..
-Category, Sub category : Helps to identify or classify the type of incident
-Impact : Provides if it has high , medium or low impact
-Urgency , Priority : provides Urgency and priority of the incident to resolve
-Created on , opened on, resolved on, closed on : Provides the timestamp details of the progress to resolve or close the task.
-*b Target Variable b*
-Time to close : The calculated variable to get time needed to close the task in hours 
+- Incident Number : An identifier of incident
+- Incident State : The status of incident in its life cycle like : created, open , assigned , resolved , closed etc..
+- Category, Sub category : Helps to identify or classify the type of incident
+- Impact : Provides if it has high , medium or low impact
+- Urgency , Priority : provides Urgency and priority of the incident to resolve
+- Created on , opened on, resolved on, closed on : Provides the timestamp details of the progress to resolve or close the task.
+** Target Variable **
+* Time to close : The calculated variable to get time needed to close the task in hours 
                 This is calculated as difference between time to close and time to create a task .
 
 Access
@@ -46,10 +52,10 @@ The sample data set used is : ![imag](./images/1_dataset.PNG)
 Auto ML is used to train the model and view the results of the metrics obtained.
 
 The following tasks are done :
-**b Connectyour workspaceand createan experiment
-**b Load data and train scikit-learn models
-**b View training results in thestudio
-**b Retrievethe best model
+** Connectyour workspaceand createan experiment
+** Load data and train scikit-learn models
+** View training results in thestudio
+** Retrievethe best model
 
 ## Connect workspaceand createexperiment
 A computetarget is cretaed to specify the computeresource to run your training script or hostyour service
@@ -92,9 +98,6 @@ n_cross_validations       |5        |Number of cross-validation splits
 
 ### Best Run of AUTOML details are shown 
 ![imag](./images/21_AutoML_BestRundetails.PNG)
-
-
-
 
 
 
