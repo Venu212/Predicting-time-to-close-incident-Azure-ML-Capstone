@@ -86,6 +86,13 @@ n_cross_validations       |3        |Number of cross-validation splits
 
 ### Create and run the experiment
 
+## Experiments
+![imag](./images/6_Experiments.PNG)
+
+## Various runs of AutoML are:
+![imag](./images/3_AutoML%20Runs.PNG)
+
+# Auto ML Runs:
 ![imag](./images/3_1_AutoML_Runs.PNG)
 
 ![imag](./images/20_AutoMLExperimentRuns.PNG)
@@ -93,15 +100,13 @@ n_cross_validations       |3        |Number of cross-validation splits
 ### The model is trained in various algorithms
 ![imag](./images/4_1_Algorithms.PNG)
 
-## Various runs of AutoML are:
-![imag](./images/3_AutoML%20Runs.PNG)
+
 
 ### The best AutoML Run is choosen and saved.
+Votinng Ensemble is chosen as better algorithm and has given R2 Score as 0.503
 
 ![imag](./images/4_AutoML_BestRun.PNG)
 
-## Experiments
-![imag](./images/6_Experiments.PNG)
 
 ## Model Summary
 ![imag](./images/7_ModelSummary.PNG)
