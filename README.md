@@ -115,7 +115,7 @@ Votinng Ensemble is chosen as better algorithm and has given R2 Score as 0.503
 
 
 
-### Best run of AUTOML details are:
+### Best run of AUTO ML details are:
 ![imag](./images/21_AutoML_BestRundetails.PNG)
 
 
@@ -148,7 +148,9 @@ Machine Learning service supports random sampling, grid sampling, and Bayesian s
  - earning rate: 
  
  primary metric you want the hyperparameter tuning experiment to optimize.
+ 
  **BanditPolicy :**
+ 
    Bandit is a termination policy based on slack factor/slack amount and evaluation interval. 
    The policy early terminates any runs where the primary metric is not within the specified slack factor / slack amount with respect
    to the best performing training run.
@@ -158,6 +160,7 @@ Machine Learning service supports random sampling, grid sampling, and Bayesian s
   - delay_evaluation=5  (delays the first policy evaluation for a specified number of intervals)
   
   **Estimator :**
+  
       - source_directory = './source',
       - entry_script = 'train-1.py',
       - compute_target = cpu_cluster,
@@ -192,11 +195,11 @@ AUTOML has resulted in provided best R2 score as shown below.
 ![imag](./images/21_AutoML_BestRundetails.PNG)
 
 
-
 ### Best RUn Details
 
-VotingEnsemble is considered the best model, based on the AUC_weighted metric.
-We deploy this model,
+Auto ML model with VotingEnsemble is considered the best model, based on the R2 metric.
+This has provided better score compared HD model 
+So Auto Ml model is consisdered for model deployment.
 
 ![imag](./images/22_BestRunDetails.PNG)
 
@@ -236,33 +239,33 @@ An endpoint is an instantiation of the model into a web servicethat can be hoste
 ![imag](./images/26_EndPointTested.PNG)
 
 
-## Clean up resources
+### Clean up resources
 - delete only the Container Instances deployment by using this API call
-service.delete()
+
+  service.delete()
+
+
+## Standout Suggestions
+
+- We can select various other features like assigned_to, repen_count, reassignment_count, sys_mod_count to check if thes features will influence the model and improve accuracy. 
+- Different feature reduction techniques could be used like PCA, RFE
+- We can work on class imbalance problem particulary on priority or importance of the incidence
+- We can check train and test set split methods like stratefied split and holdout based validation to check if that results in better accuracy
+- We can consider prportionate split from each category for test and train to check if that would result in better accuracy .
+- We can check SGD methods to see if this could help improve accuracy.
+- We can fine tune all hyper parameters and check if it can enhance performance of the model.
+
+## Screen recording##
+ - Model is trained in Auto ML and Hyperdrive.
+ - Best model is choosen.
+ - Model is saved and deployed.
+ - Webservice endpoint is created.
+ - Endpoint is tested with test data .
+ 
+ Please find recording:
+ ## [Incident Management](https://youtu.be/kvDkbVx-MGc)
 
 
 
-Results
-TODO: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
-TODO Remeber to provide screenshots of the RunDetails widget as well as a screenshot of the best model trained with it's parameters.
 
-Hyperparameter Tuning
-TODO: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
-
-Results
-TODO: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
-
-TODO Remeber to provide screenshots of the RunDetails widget as well as a screenshot of the best model trained with it's parameters.
-
-Model Deployment
-TODO: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
-
-Screen Recording
-TODO Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-
-A working model
-Demo of the deployed model
-Demo of a sample request sent to the endpoint and its response
-Standout Suggestions
-TODO (Optional): This is where you can provide information about any standout suggestions that you have attempted.
