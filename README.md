@@ -6,12 +6,8 @@ Incident management is the process used by DevOps and IT Operations teams to res
 Incidents that cannot be resolved quickly by the help desk will be assigned to specialist technical support groups. 
 A resolution or work-around should be established as quickly as possible in order to restore the service.
 
-The dats is taken from s Servicenow instance of ITSM ( IT Service Management) . It provides details of the incident and it's characteristics and tells when the issue is resolved or closed by specilist . In this project , I am trying to predict the time taken for incident to close or resolve, so that the requester will be informed upfront.
-Also it helps to analyze if the incident wil miss SLA ( service level agreement ) in such cases , there will be a scope to take preventive action by mobilizing the suitable resources.
-
-
-Project Set Up and Installation
-OPTIONAL: If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
+The dats is taken from  Servicenow instance of ITSM ( IT Service Management) . It provides details of the incident and it's characteristics and informs when the issue is resolved or closed by the specilist . In this project , I am trying to predict the time taken for incident to close or resolve it, so that the requester will be informed about ETA ( expected time of accomplishment)
+Also the prediction for time to close incident helps to analyze if the incident wil miss SLA ( service level agreement ) in such cases , there will be a scope to take preventive action by mobilizing the suitable resources.
 
 ## Dataset
 
@@ -58,13 +54,13 @@ Auto ML is used to train the model and view the results of the metrics obtained.
 
 The following tasks are done :
 
-- Connectyour workspaceand createan experiment 
+- Connect your workspace and create an experiment 
 - Load data and train scikit-learn models
 - View training results in thestudio
-- Retrievethe best model
+- Retrieve the best model
 
 ## Connect workspace and create experiment
-A computetarget is cretaed to specify the computeresource to run your training script or hostyour service
+A computetarget is cretaed to specify the computer source to run your training script or host your service
 
 Compute is creatd and configuration details is obtained 
 ![imag](./images/2_compute.PNG)
@@ -73,10 +69,10 @@ AUTO ML configuration is created
 
    PROPERTY             | VALUE   | DESCRIPTION
 ------------------------|----------|-------------------------------------------------------------
-experiment_timeout_minutes|  20     | Maximum amount of timein minutes
+experiment_timeout_minutes|  20     | Maximum amount of time in minutes
 primary_metric            |R2 Score | R2 Score
-featurization             | auto    | To handel theinput data (handling missing data, converting text to numeric, etc.)
-verbosity                 |logging.INFO| Controls thelevel of logging.
+featurization             | auto    | To handle the input data (handling missing data, converting text to numeric, etc.)
+verbosity                 |logging.INFO| Controls the level of logging.
 n_cross_validations       |3        |Number of cross-validation splits
 
 
@@ -197,7 +193,7 @@ AUTOML has resulted in provided best R2 score as shown below.
 
 ### Best RUn Details
 
-Auto ML model with VotingEnsemble is considered the best model, based on the R2 metric.
+Auto ML model with VotingEnsemble is considered the best model, based on the R2 score metric.
 This has provided better score compared HD model 
 So Auto Ml model is consisdered for model deployment.
 
