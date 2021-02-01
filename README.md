@@ -251,7 +251,7 @@ An endpoint is an instantiation of the model into a web servicethat can be hoste
 - We can check SGD methods to see if this could help improve accuracy.
 - We can fine tune all hyper parameters and check if it can enhance performance of the model.
 
-## Screen recording##
+## Screen recording
  - Model is trained in Auto ML and Hyperdrive.
  - Best model is choosen.
  - Model is saved and deployed.
