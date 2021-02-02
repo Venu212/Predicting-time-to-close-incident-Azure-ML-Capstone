@@ -138,11 +138,11 @@ configurations
 Parameter sampling method to use over the hyperparameter space definition. Azure
 Machine Learning service supports random sampling, grid sampling, and Bayesian sampling methods
 
-**Ramdom Sampling**
- In random sampling, hyperparameter values are randomly selected from the defined search space
- - Max depth: 
- - earning rate: 
- 
+**Ramdom Sampling :**
+
+ In random sampling, hyperparameter values  for learning rate and max depth are randomly selected from the defined search space
+ It supports discrete and continuous hyperparameters and the values are selected randomly from a search space.
+
  primary metric you want the hyperparameter tuning experiment to optimize.
  
  **BanditPolicy :**
@@ -164,6 +164,11 @@ Machine Learning service supports random sampling, grid sampling, and Bayesian s
 
 
 ![imag](./images/15_Hyperdrive%20config.PNG)
+
+ # Generated best parameters by Hyperdrive are:
+ ![imag](./images/16_1_HD_BestModel_Metrcis.PNG)
+ 
+ 
 
 
 ### The experiment is created and submitted. Hyperdrive resulted into the following runs
